@@ -1,4 +1,4 @@
-timestamp
+Timestamp
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
 
@@ -19,15 +19,31 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 To use the module,
 
 ``` javascript
-var lib = require( 'validate.io-timestamp' );
+var isTimestamp = require( 'validate.io-timestamp' );
+
+console.log( isTimestamp( Date.now() ) );
+// Returns true
+
+var secs = Math.round( Date.now()/1000 );
+console.log( isTimestamp( secs ) );
+// Returns true
+
+console.log( isTimestamp( 123456 ) );
+// Returns false
+
+console.log( isTimestamp( new Date() ) );
+// Returns false
 ```
+
+A valid `timestamp` may be in either `milliseconds` or `seconds`. 
+
+
+## Notes
+
+The `value` to be validated should be of type `number`. For any other type, the method returns `false`.
 
 
 ## Examples
-
-``` javascript
-var lib = require( 'validate.io-timestamp' );
-```
 
 To run the example code from the top-level application directory,
 

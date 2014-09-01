@@ -26,7 +26,8 @@
     "validate.io",
     "validate",
     "validation",
-    "validator"
+    "validator",
+    "timestamp"
   ],
   "bugs": {
     "url": "https://github.com/validate-io/timestamp/issues"
