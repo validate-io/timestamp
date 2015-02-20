@@ -1,14 +1,16 @@
+'use strict';
+
 var isTimestamp = require( './../lib' );
 
 console.log( isTimestamp( Date.now() ) );
-// Returns true
+// returns true
 
 var secs = Math.round( Date.now()/1000 );
 console.log( isTimestamp( secs ) );
-// Returns true
+// returns true
 
 console.log( isTimestamp( 123456 ) );
-// Returns false
+// returns false
 
 console.log( isTimestamp( new Date() ) );
-// Returns false
+// returns false

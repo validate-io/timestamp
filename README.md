@@ -16,34 +16,49 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 
 ## Usage
 
-To use the module,
-
 ``` javascript
 var isTimestamp = require( 'validate.io-timestamp' );
+```
 
-console.log( isTimestamp( Date.now() ) );
-// Returns true
+#### isTimestamp( value )
 
-var secs = Math.round( Date.now()/1000 );
-console.log( isTimestamp( secs ) );
-// Returns true
+Validates if a `value` is a timestamp.
 
-console.log( isTimestamp( 123456 ) );
-// Returns false
+``` javascript
+var value = Date.now();
 
-console.log( isTimestamp( new Date() ) );
-// Returns false
+var bool = isTimestamp( value );
+// returns true
 ```
 
 A valid `timestamp` may be in either `milliseconds` or `seconds`. 
 
 
+
 ## Notes
 
-The `value` to be validated should be of type `number`. For any other type, the method returns `false`.
+The `value` to be validated should be `numeric`. For any other type, the method returns `false`.
 
 
 ## Examples
+
+``` javascript
+var isTimestamp = require( 'validate.io-timestamp' );
+
+console.log( isTimestamp( Date.now() ) );
+// returns true
+
+var secs = Math.round( Date.now()/1000 );
+console.log( isTimestamp( secs ) );
+// returns true
+
+console.log( isTimestamp( 123456 ) );
+// returns false
+
+console.log( isTimestamp( new Date() ) );
+// returns false
+```
+
 
 To run the example code from the top-level application directory,
 
@@ -56,7 +71,7 @@ $ node ./examples/index.js
 
 ### Unit
 
-Unit tests use the [Mocha](http://visionmedia.github.io/mocha) test framework with [Chai](http://chaijs.com) assertions. To run the tests, execute the following command in the top-level application directory:
+Unit tests use the [Mocha](http://mochajs.org) test framework with [Chai](http://chaijs.com) assertions. To run the tests, execute the following command in the top-level application directory:
 
 ``` bash
 $ make test
@@ -76,16 +91,16 @@ $ make test-cov
 Istanbul creates a `./reports/coverage` directory. To access an HTML version of the report,
 
 ``` bash
-$ open reports/coverage/lcov-report/index.html
+$ make view-cov
 ```
 
 
+---
 ## License
 
 [MIT license](http://opensource.org/licenses/MIT). 
 
 
----
 ## Copyright
 
 Copyright &copy; 2014. Athan Reines.
