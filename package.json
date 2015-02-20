@@ -28,7 +28,13 @@
     "validation",
     "validator",
     "time",
-    "timestamp"
+    "timestamp",
+    "is",
+    "type",
+    "check",
+    "istimestamp",
+    "unix",
+    "valid"
   ],
   "bugs": {
     "url": "https://github.com/validate-io/timestamp/issues"
