@@ -1,6 +1,6 @@
 {
   "name": "validate.io-timestamp",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Validates if a value is a timestamp.",
   "author": {
     "name": "Athan Reines",
